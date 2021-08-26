@@ -5,12 +5,6 @@ public class Car {
 	public String model;
 	public IEngine engine;
 	
-	public Car() {
-		this.model = "";
-		odometer = 0;
-		engine = new LargeEngine();
-	}
-	
 	public Car(String model) {
 		this.model = model;
 		odometer = 0;
@@ -28,5 +22,4 @@ public class Car {
 	public int GetOdometer() {
 		return odometer;
 	}
-
 }
