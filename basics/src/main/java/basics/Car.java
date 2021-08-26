@@ -14,6 +14,7 @@ public class Car {
 	public Car(String model) {
 		this.model = model;
 		odometer = 0;
+		engine = new LargeEngine();
 	}
 	
 	public void Drive(int distance) {
