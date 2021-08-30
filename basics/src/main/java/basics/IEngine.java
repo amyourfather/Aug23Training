@@ -2,7 +2,7 @@ package basics;
 
 public interface IEngine {
 	
-	int CylinderCount = 0;
+	int getCylinderCount();
 	
 	void Start();
 }
