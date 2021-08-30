@@ -16,8 +16,12 @@ order by amount desc
 limit 1;
 
 4. Get the number of records in the customer table for store id #1.
-
+SELECT count(store_id) as StoreID1Count FROM sakila.customer
+where store_id = 1;
 5. Get all payment records for customer with email address "NANCY.THOMAS@sakilacustomer.org"
+
+SELECT * FROM sakila.customer
+where email = "NANCY.THOMAS@sakilacustomer.org";
 
 6. Use a View to get the film info for actor Bob Fawcett.
 
