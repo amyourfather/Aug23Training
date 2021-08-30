@@ -2,10 +2,18 @@ Sakila Database
 Write a SQL statement for each of the following. 
 
 1. Get 10 cities in descending alphabetical order.
+SELECT * FROM sakila.city
+order by city desc
+limit 10;
 
 2. Get all films with "airplane" in the title.
-
+SELECT * FROM sakila.film
+where title like "%AIRPLANE%";
 3. Get the highest payment amount.
+
+SELECT amount FROM sakila.payment
+order by amount desc
+limit 1;
 
 4. Get the number of records in the customer table for store id #1.
 
