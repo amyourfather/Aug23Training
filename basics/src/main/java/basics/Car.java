@@ -1,25 +1,23 @@
 package basics;
 
-public class Car {
-	private int odometer;
+public class Car extends Vehicle{
 	public String model;
 	public IEngine engine;
 	
-	public Car(String model) {
-		this.model = model;
-		odometer = 0;
+	public Car() {
+		this.model = null;
+		this.odometer = 0;
 		engine = new LargeEngine();
 	}
 	
-	public void Drive(int distance) {
-		odometer += distance;
+	public Car(String model) {
+		this.model = model;
+		this.odometer = 0;
+		engine = new LargeEngine();
 	}
 	
 	public void Start() {
 		engine.Start();
 	}
 	
-	public int GetOdometer() {
-		return odometer;
-	}
 }

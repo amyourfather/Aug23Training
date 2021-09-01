@@ -1,7 +1,6 @@
 package basics;
 
-public class Bicycle {
-	private int odometer;
+public class Bicycle extends Vehicle{
 	private boolean driveable;
 	
 	public Bicycle() {
