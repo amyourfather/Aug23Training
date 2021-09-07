@@ -8,3 +8,81 @@ NFR001
 NFR002
 
 Find and log 2 bugs.
+
+
+Test case ID: 001
+Related functional requirements: FR001 - B1
+Title: user login
+Summary: User will be able to login into the website using the email and password
+Precondition: user has an account on this website 
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "Already Registered" block, input email address and password to sign in
+4. if user login successfully, website jumps to user account page
+
+
+Test case ID: 002
+Related functional requirements: FR002 - B1
+Title: user registration, mobile phone
+Summary: User will be able to get register with simple registration from
+Precondition: user has an email address
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "new user" block, input email address
+4. click on "Create an account"
+5. input first name into the "first name" row
+6. input last name into the "last name" row
+7. email address on the "email" row is the same as the one on step 3
+8. input a contact number on "mobile phone" row
+9. create a password and input to "password" row
+10. confirm password DNE
+11. accept terms and conditions DNE
+12. click on green "register" bottom
+13. if user registration successfully, website jumps to user account page
+
+
+Test case ID: 003
+Related functional requirements: FR002 - B1
+Title: user registration, home phone
+Summary: User will be able to get register with simple registration from
+Precondition: user has an email address
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "new user" block, input email address
+4. click on "Create an account"
+5. input first name into the "first name" row
+6. input last name into the "last name" row
+7. email address on the "email" row is the same as the one on step 3
+8. input a contact number on "home phone" row
+9. create a password and input to "password" row
+10. confirm password DNE
+11. accept terms and conditions DNE
+12. click on green "register" bottom
+13. if user registration successfully, website jumps to user account page
+
+
+Test case ID: 004
+Related functional requirements: FR003 - B1
+Title: Buyer search products
+Summary: User will be able to login into the website using the email and password
+Precondition: user has an account on this website 
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "Already Registered" block, input email address and password to sign in
+4. if user login successfully, website jumps to user account page
+
+Test case ID: 005
+Related functional requirements: FR003 - B1
+Title: Guest user search products
+Summary: User will be able to login into the website using the email and password
+Precondition: user has an account on this website 
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "Already Registered" block, input email address and password to sign in
+4. if user login successfully, website jumps to user account page
+
