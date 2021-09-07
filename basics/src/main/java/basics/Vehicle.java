@@ -1,6 +1,6 @@
 package basics;
 
-public class Vehicle {
+public abstract class Vehicle {
 	protected int odometer;
 	
 	public void Drive(int distance) {
