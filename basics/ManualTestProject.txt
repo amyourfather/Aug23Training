@@ -1,0 +1,10 @@
+FR001 - B1
+FR002 - B1
+FR003 - B1
+FR004 - B2
+FR007 - B1, B4
+FR008 - B3
+NFR001
+NFR002
+
+Find and log 2 bugs.
