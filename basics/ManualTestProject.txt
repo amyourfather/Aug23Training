@@ -66,23 +66,129 @@ Steps:
 
 Test case ID: 004
 Related functional requirements: FR003 - B1
-Title: Buyer search products
-Summary: User will be able to login into the website using the email and password
-Precondition: user has an account on this website 
+Title: Buyer search products by keyword
+Summary: buyer can search specific products by keyword
+Precondition: user has an account on this website and logged in
 Steps: 
-1. go to main page
-2. click on sign in page on the top right
-3. use "Already Registered" block, input email address and password to sign in
-4. if user login successfully, website jumps to user account page
+
+
 
 Test case ID: 005
 Related functional requirements: FR003 - B1
-Title: Guest user search products
-Summary: User will be able to login into the website using the email and password
-Precondition: user has an account on this website 
+Title: Guest user search products by keyword
+Summary: guest buyer can search specific products by keyword
+Precondition: guest user doesn't login 
 Steps: 
-1. go to main page
-2. click on sign in page on the top right
-3. use "Already Registered" block, input email address and password to sign in
-4. if user login successfully, website jumps to user account page
 
+
+Test case ID: 006
+Related functional requirements: FR003 - B1
+Title: Buyer search products by browsing through category
+Summary: buyer can search specific products by browsing through category
+Precondition: user has an account on this website and logged in
+Steps: 
+
+
+
+Test case ID: 007
+Related functional requirements: FR003 - B1
+Title: Guest user search products by browsing through category
+Summary: guest buyer can search specific products by browsing through category
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 008
+Related functional requirements: FR003 - B1
+Title: Buyer search products by browsing through sub category
+Summary: buyer can search specific products by browsing through sub category
+Precondition: user has an account on this website and logged in
+Steps: 
+
+
+
+Test case ID: 009
+Related functional requirements: FR003 - B1
+Title: Guest user search products by browsing through sub category
+Summary: guest buyer can search specific products by browsing through sub category
+Precondition: guest user doesn't login 
+Steps: 
+
+
+Test case ID: 010
+Related functional requirements: FR003 - B1
+Title: Buyer search products by using filters
+Summary: buyer can search specific products by using filters
+Precondition: user has an account on this website and logged in
+Steps: 
+
+
+
+Test case ID: 011
+Related functional requirements: FR003 - B1
+Title: Guest user search products by using filters
+Summary: guest buyer can search specific products by using filters
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 012
+Related functional requirements: FR003 - B1
+Title: Buyer search products by sorting options
+Summary: buyer can search specific products by sorting options
+Precondition: user has an account on this website and logged in
+Steps: 
+
+
+
+Test case ID: 013
+Related functional requirements: FR003 - B1
+Title: Guest user search products by sorting options
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+
+Test case ID: 014
+Related functional requirements: FR004 - B2
+Title: buyer click product title to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 015
+Related functional requirements: FR004 - B2
+Title: guest buyer click product title to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 016
+Related functional requirements: FR004 - B2
+Title: buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 017
+Related functional requirements: FR004 - B2
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 018
+Related functional requirements: FR007 - B1
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+
+
+
+
+Test case ID: 017
+Related functional requirements: FR007 - B4
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
