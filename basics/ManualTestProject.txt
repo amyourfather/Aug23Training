@@ -70,7 +70,10 @@ Title: Buyer search products by keyword
 Summary: buyer can search specific products by keyword
 Precondition: user has an account on this website and logged in
 Steps: 
-
+1. Choose one of the product as expected searching result
+2. Type in partial name on the searching bar
+3. Click search
+4. if expected result shows up and no other unexpected result comes out(such as not products that are not even related to searching keyword) then test passed
 
 
 Test case ID: 005
@@ -79,7 +82,10 @@ Title: Guest user search products by keyword
 Summary: guest buyer can search specific products by keyword
 Precondition: guest user doesn't login 
 Steps: 
-
+1. Choose one of the product as expected searching result
+2. Type in partial name on the searching bar
+3. Click search
+4. if expected result shows up and no other unexpected result comes out(such as not products that are not even related to searching keyword) then test passed
 
 Test case ID: 006
 Related functional requirements: FR003 - B1
@@ -87,7 +93,9 @@ Title: Buyer search products by browsing through category
 Summary: buyer can search specific products by browsing through category
 Precondition: user has an account on this website and logged in
 Steps: 
-
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. if expected item shows on showed items, test passed
 
 
 Test case ID: 007
@@ -96,6 +104,9 @@ Title: Guest user search products by browsing through category
 Summary: guest buyer can search specific products by browsing through category
 Precondition: guest user doesn't login 
 Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. if expected item shows on showed items, test passed
 
 Test case ID: 008
 Related functional requirements: FR003 - B1
@@ -103,6 +114,10 @@ Title: Buyer search products by browsing through sub category
 Summary: buyer can search specific products by browsing through sub category
 Precondition: user has an account on this website and logged in
 Steps: 
+1. randomly choose one of the product as searching product
+2. mouse point to main category(Women category on the top) until sub category shows up
+3. click on corresponding sub category
+4. if expected item shows on showed items, test passed
 
 
 
@@ -112,7 +127,10 @@ Title: Guest user search products by browsing through sub category
 Summary: guest buyer can search specific products by browsing through sub category
 Precondition: guest user doesn't login 
 Steps: 
-
+1. randomly choose one of the product as searching product
+2. mouse point to main category(Women category on the top) until sub category shows up
+3. click on corresponding sub category
+4. if expected item shows on showed items, test passed
 
 Test case ID: 010
 Related functional requirements: FR003 - B1
@@ -120,7 +138,10 @@ Title: Buyer search products by using filters
 Summary: buyer can search specific products by using filters
 Precondition: user has an account on this website and logged in
 Steps: 
-
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using filters to approach the searching product
+4. if expected item shows on showed items, test passed
 
 
 Test case ID: 011
@@ -129,6 +150,10 @@ Title: Guest user search products by using filters
 Summary: guest buyer can search specific products by using filters
 Precondition: guest user doesn't login 
 Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using filters to approach the searching product
+4. if expected item shows on showed items, test passed
 
 Test case ID: 012
 Related functional requirements: FR003 - B1
@@ -136,7 +161,10 @@ Title: Buyer search products by sorting options
 Summary: buyer can search specific products by sorting options
 Precondition: user has an account on this website and logged in
 Steps: 
-
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using sorting option to approach the searching product
+4. if expected item shows on showed items, test passed
 
 
 Test case ID: 013
@@ -145,44 +173,68 @@ Title: Guest user search products by sorting options
 Summary: guest buyer can search specific products by sorting options
 Precondition: guest user doesn't login 
 Steps: 
-
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using sorting option to approach the searching product
+4. if expected item shows on showed items, test passed
 
 Test case ID: 014
 Related functional requirements: FR004 - B2
 Title: buyer click product title to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
+Summary: buyer can view product detail by clicking the product title
+Precondition: user has an account on this website and logged in
 Steps: 
+1. randomly choose one of the product as testing product
+2. click on the title of product
+3. if jumps to product detail page then test pass
 
 Test case ID: 015
 Related functional requirements: FR004 - B2
 Title: guest buyer click product title to view detail
-Summary: guest buyer can search specific products by sorting options
+Summary: guest buyer can view product detail by clicking the product title
 Precondition: guest user doesn't login 
 Steps: 
+1. randomly choose one of the product as testing product
+2. click on the title of product
+3. if jumps to product detail page then test pass
 
 Test case ID: 016
 Related functional requirements: FR004 - B2
 Title: buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
+Summary: buyer can view product detail by clicking the product image
+Precondition: user has an account on this website and logged in
 Steps: 
+1. randomly choose one of the product as testing product
+2. click on the picture of product
+3. if jumps to product detail page then test pass
+
+
 
 Test case ID: 017
 Related functional requirements: FR004 - B2
 Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
+Summary: guest buyer can view product detail by clicking the product image
 Precondition: guest user doesn't login 
 Steps: 
+1. randomly choose one of the product as testing product
+2. click on the picture of product
+3. if jumps to product detail page then test pass
+
+
 
 Test case ID: 018
 Related functional requirements: FR007 - B1
-Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
+Title: buyer add products to cart from product detail page
+Summary: The products can be added by the logged in buyers into shopping cart from the product detail page.
+Precondition: user has an account on this website and logged in and product detail page is accessible
 Steps: 
-
-
+1.randomly choose one of the product as testing product
+2.click on product page to jump to product detail page
+3.click "add to cart" bottom on the right side
+4. wait until the pop up window shows up
+5. close the pop up window
+6. if number of product + 1 on the top right cart block then test part one passed. click on cart block on the top right it will jump to check out page
+7. if chosen product shows up on check out page summary then whole test passed
 
 
 
@@ -192,3 +244,37 @@ Title: guest buyer click product image to view detail
 Summary: guest buyer can search specific products by sorting options
 Precondition: guest user doesn't login 
 Steps: 
+
+
+Test case ID: 018
+Related functional requirements: FR008 - B3
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+
+Test case ID: 018
+Related functional requirements: NFR001
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+Test case ID: 018
+Related functional requirements: NFR002
+Title: guest buyer click product image to view detail
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+
+
+Find and log 2 bugs.
+
+Bug ID: 001
+Title:
+Summary:
+
+Bug ID: 002
+Title:
+Summary:
