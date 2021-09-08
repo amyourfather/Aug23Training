@@ -39,7 +39,7 @@ Steps:
 9. create a password and input to "password" row
 10. confirm password DNE
 11. accept terms and conditions DNE
-12. click on green "register" bottom
+12. click on green "register" button
 13. if user registration successfully, website jumps to user account page
 
 
@@ -60,7 +60,7 @@ Steps:
 9. create a password and input to "password" row
 10. confirm password DNE
 11. accept terms and conditions DNE
-12. click on green "register" bottom
+12. click on green "register" button
 13. if user registration successfully, website jumps to user account page
 
 
@@ -230,7 +230,7 @@ Precondition: user has an account on this website and logged in and product deta
 Steps: 
 1.randomly choose one of the product as testing product
 2.click on product page to jump to product detail page
-3.click "add to cart" bottom on the right side
+3.click "add to cart" button on the right side
 4. wait until the pop up window shows up
 5. close the pop up window
 6. if number of product + 1 on the top right cart block then test part one passed. click on cart block on the top right it will jump to check out page
@@ -238,43 +238,66 @@ Steps:
 
 
 
-Test case ID: 017
+Test case ID: 019
 Related functional requirements: FR007 - B4
-Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
+Title: buyer add items in shopping cart
+Summary: User will be able to add items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
 Steps: 
+No steps avaliable! this website doesn't support adding items in shopping cart
 
+Test case ID: 020
+Related functional requirements: FR007 - B4
+Title: buyer remove items in shopping cart
+Summary: User will be able to remove items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. under the "Qty" section, click on "-" button
+3. the amount of this product - 1, test passed. 
 
-Test case ID: 018
+Test case ID: 021
+Related functional requirements: FR007 - B4
+Title: buyer update quantity of items in shopping cart
+Summary: User will be able to update quantity of items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. under the "Qty" section, click on "+" button
+3. the amount of this product + 1, test passed. 
+
+Test case ID: 022
 Related functional requirements: FR008 - B3
-Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
+Title: Buyer enter billing address and shopping address before checkout
+Summary: Buyer will required to enter billing and shipping address before checkout and payment.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
 Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. click on "Proceed to checkout" on the right bottom.
+3. if user has already input their billing address and/or shopping address then by default those addresses will be used. if not then website will ask user to input their addresses
 
-
-Test case ID: 018
+Test case ID: 023
 Related functional requirements: NFR001
-Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
-Steps: 
+Title: The website repository shall accommodate up to 100 users concurrently.
+Summary: use selenium to write test to ask http request for 100 users concurrently 
+Steps: use selenium to write test to ask http request for 100 users concurrently. use synchronization to simulate 100 user access to home page.
 
-Test case ID: 018
+Test case ID: 024
 Related functional requirements: NFR002
-Title: guest buyer click product image to view detail
-Summary: guest buyer can search specific products by sorting options
-Precondition: guest user doesn't login 
-Steps: 
+Title: page loading speed test
+Summary: web pages should not take more than 30 seconds to load in good speed of internet.
+Steps: use selienium/java to write a test. this test will simulate 10000 users that try to access to home page. each user will record the time that 
+access to home page. after that will average out the time. if the average time is <= to 30 seconds, then test pass
 
 
 Find and log 2 bugs.
 
 Bug ID: 001
-Title:
-Summary:
+Title: Searching filter can not update
+Summary: when user click on any kind of sorting filter/catalog filter, website keeps loading and never updated
 
 Bug ID: 002
-Title:
-Summary:
+Title: Item comparison Bug
+Summary: for a product that has added to compare list, when user refreshes page, this product still be able to be added again to compare list.
+And also the number of compare items shows on compare list will + 1. But when click into compare items page the list item doesn't have duplicate
+and the number of compare items drops back down.
