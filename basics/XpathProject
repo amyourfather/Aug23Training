@@ -1,7 +1,9 @@
-1
-2
-3
-4
-5
-6
-7
+1. //input[@id = 'userName']
+2. //button
+3. //div[text() = 'Vega']
+		or
+   //div[text() = 'Vega' and @class = 'rt-td'] (for more specific)
+4. //input[@id = 'impressiveRadio']/..
+5. //input[@id = 'impressiveRadio']/ancestor::div
+6. //input[@id = 'impressiveRadio']/../child::*[not(@id = 'impressiveRadio')]
+7. //button[text()[contains(.,'Click')]]
