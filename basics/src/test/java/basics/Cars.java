@@ -7,7 +7,8 @@ import org.junit.Test;
 public class Cars {
 	@Test
 	public void CanBuildCar() {
-		Car TestCar = new Car("Corvette");
+		IEngine TestEngine = new LargeEngine();
+		Car TestCar = new Car("Corvette", TestEngine);
 		
 		TestCar.Start();
 	}
@@ -18,8 +19,9 @@ public class Cars {
 		int DriveDistanceTwo = 150;
 		int TempPointOne = 100;
 		int TempPointTwo = 250;
+		IEngine TestEngine = new LargeEngine();
 		
-		Car TestCar = new Car("Toyota");
+		Car TestCar = new Car("Toyota", TestEngine);
 		
 		TestCar.Start();
 		TestCar.Drive(DriveDistanceOne);

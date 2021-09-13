@@ -7,13 +7,12 @@ public class Car extends Vehicle{
 	public Car() {
 		this.model = null;
 		this.odometer = 0;
-		engine = new LargeEngine();
 	}
 	
-	public Car(String model) {
+	public Car(String model, IEngine engine) {
 		this.model = model;
 		this.odometer = 0;
-		engine = new LargeEngine();
+		this.engine = engine;
 	}
 	
 	public void Start() {

@@ -15,7 +15,6 @@ public class BicycleTest {
 		
 		Bicycle TestB = new Bicycle();
 		
-		TestB.Start();
 		TestB.Drive(DriveDistanceOne);
 		assertEquals(TestB.GetOdometer(), TempPointOne);
 		

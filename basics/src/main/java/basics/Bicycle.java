@@ -17,8 +17,4 @@ public class Bicycle extends Vehicle{
 			odometer += distance;
 		}
 	}
-	
-	public void Start() {
-		System.out.println("Start Driving!!!!");
-	}
 }
