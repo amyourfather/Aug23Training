@@ -1,0 +1,68 @@
+Sakila Database
+Write a SQL statement for each of the following. 
+
+1. Get 10 cities in descending alphabetical order.
+SELECT * FROM sakila.city
+order by city desc
+limit 10;
+
+2. Get all films with "airplane" in the title.
+
+SELECT * FROM sakila.film
+where title like "%AIRPLANE%";
+
+
+3. Get the highest payment amount.
+
+SELECT amount FROM sakila.payment
+order by amount desc
+limit 1;
+
+4. Get the number of records in the customer table for store id #1.
+SELECT count(store_id) as StoreID1Count FROM sakila.customer
+where store_id = 1;
+5. Get all payment records for customer with email address "NANCY.THOMAS@sakilacustomer.org"
+
+SELECT * FROM sakila.customer
+where email = "NANCY.THOMAS@sakilacustomer.org";
+
+6. Use a View to get the film info for actor Bob Fawcett.
+
+use sakila;
+select a.film_info from actor_info as a
+where a.first_name = 'Bob' and a.last_name = 'Fawcett';
+
+7. Use a Stored Procedure to get the 4 inventory ids for the film "Alien Center" at Store #2. 
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `new_procedure`(OUT Alien_Center_Store_2_Count INT)
+BEGIN
+SELECT 
+    i.inventory_id
+FROM
+    film AS f
+        JOIN
+    inventory AS i ON f.film_id = i.film_id
+WHERE
+    f.title = 'Alien Center'
+        AND i.store_id = 2;
+SELECT FOUND_ROWS() INTO Alien_Center_Store_2_Count;
+END
+
+8. Insert a new store. Ensure that you use TRANSACTION. (This one is possible but it's tough! Pay attention to constraints and the order that you are inserting data.) 
+
+use sakila;
+insert into staff(staff_id, first_name, last_name, address_id, picture, email, store_id, username)
+values(3, "Ben", "X", 2, NULL, NULL, 2, "BBB");
+insert into store (store_id, manager_staff_id, address_id)
+values (3, 3, 2);
+
+9. Update the timestamp to the current date/time for the new store you entered in the previous question. 
+
+update store
+set last_update = "2021-08-29 04:57:12"
+where store_id = 3;
+
+10. Delete the new store. 
+
+delete from store
+where store_id = 3;
