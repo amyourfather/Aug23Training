@@ -1,0 +1,303 @@
+FR001 - B1
+FR002 - B1
+FR003 - B1
+FR004 - B2
+FR007 - B1, B4
+FR008 - B3
+NFR001
+NFR002
+
+Find and log 2 bugs.
+
+
+Test case ID: 001
+Related functional requirements: FR001 - B1
+Title: user login
+Summary: User will be able to login into the website using the email and password
+Precondition: user has an account on this website 
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "Already Registered" block, input email address and password to sign in
+4. if user login successfully, website jumps to user account page
+
+
+Test case ID: 002
+Related functional requirements: FR002 - B1
+Title: user registration, mobile phone
+Summary: User will be able to get register with simple registration from
+Precondition: user has an email address
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "new user" block, input email address
+4. click on "Create an account"
+5. input first name into the "first name" row
+6. input last name into the "last name" row
+7. email address on the "email" row is the same as the one on step 3
+8. input a contact number on "mobile phone" row
+9. create a password and input to "password" row
+10. confirm password DNE
+11. accept terms and conditions DNE
+12. click on green "register" button
+13. if user registration successfully, website jumps to user account page
+
+
+Test case ID: 003
+Related functional requirements: FR002 - B1
+Title: user registration, home phone
+Summary: User will be able to get register with simple registration from
+Precondition: user has an email address
+Steps: 
+1. go to main page
+2. click on sign in page on the top right
+3. use "new user" block, input email address
+4. click on "Create an account"
+5. input first name into the "first name" row
+6. input last name into the "last name" row
+7. email address on the "email" row is the same as the one on step 3
+8. input a contact number on "home phone" row
+9. create a password and input to "password" row
+10. confirm password DNE
+11. accept terms and conditions DNE
+12. click on green "register" button
+13. if user registration successfully, website jumps to user account page
+
+
+Test case ID: 004
+Related functional requirements: FR003 - B1
+Title: Buyer search products by keyword
+Summary: buyer can search specific products by keyword
+Precondition: user has an account on this website and logged in
+Steps: 
+1. Choose one of the product as expected searching result
+2. Type in partial name on the searching bar
+3. Click search
+4. if expected result shows up and no other unexpected result comes out(such as not products that are not even related to searching keyword) then test passed
+
+
+Test case ID: 005
+Related functional requirements: FR003 - B1
+Title: Guest user search products by keyword
+Summary: guest buyer can search specific products by keyword
+Precondition: guest user doesn't login 
+Steps: 
+1. Choose one of the product as expected searching result
+2. Type in partial name on the searching bar
+3. Click search
+4. if expected result shows up and no other unexpected result comes out(such as not products that are not even related to searching keyword) then test passed
+
+Test case ID: 006
+Related functional requirements: FR003 - B1
+Title: Buyer search products by browsing through category
+Summary: buyer can search specific products by browsing through category
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. if expected item shows on showed items, test passed
+
+
+Test case ID: 007
+Related functional requirements: FR003 - B1
+Title: Guest user search products by browsing through category
+Summary: guest buyer can search specific products by browsing through category
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. if expected item shows on showed items, test passed
+
+Test case ID: 008
+Related functional requirements: FR003 - B1
+Title: Buyer search products by browsing through sub category
+Summary: buyer can search specific products by browsing through sub category
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as searching product
+2. mouse point to main category(Women category on the top) until sub category shows up
+3. click on corresponding sub category
+4. if expected item shows on showed items, test passed
+
+
+
+Test case ID: 009
+Related functional requirements: FR003 - B1
+Title: Guest user search products by browsing through sub category
+Summary: guest buyer can search specific products by browsing through sub category
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as searching product
+2. mouse point to main category(Women category on the top) until sub category shows up
+3. click on corresponding sub category
+4. if expected item shows on showed items, test passed
+
+Test case ID: 010
+Related functional requirements: FR003 - B1
+Title: Buyer search products by using filters
+Summary: buyer can search specific products by using filters
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using filters to approach the searching product
+4. if expected item shows on showed items, test passed
+
+
+Test case ID: 011
+Related functional requirements: FR003 - B1
+Title: Guest user search products by using filters
+Summary: guest buyer can search specific products by using filters
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using filters to approach the searching product
+4. if expected item shows on showed items, test passed
+
+Test case ID: 012
+Related functional requirements: FR003 - B1
+Title: Buyer search products by sorting options
+Summary: buyer can search specific products by sorting options
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using sorting option to approach the searching product
+4. if expected item shows on showed items, test passed
+
+
+Test case ID: 013
+Related functional requirements: FR003 - B1
+Title: Guest user search products by sorting options
+Summary: guest buyer can search specific products by sorting options
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as searching product
+2. click on main category(Women category on the top)
+3. using sorting option to approach the searching product
+4. if expected item shows on showed items, test passed
+
+Test case ID: 014
+Related functional requirements: FR004 - B2
+Title: buyer click product title to view detail
+Summary: buyer can view product detail by clicking the product title
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as testing product
+2. click on the title of product
+3. if jumps to product detail page then test pass
+
+Test case ID: 015
+Related functional requirements: FR004 - B2
+Title: guest buyer click product title to view detail
+Summary: guest buyer can view product detail by clicking the product title
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as testing product
+2. click on the title of product
+3. if jumps to product detail page then test pass
+
+Test case ID: 016
+Related functional requirements: FR004 - B2
+Title: buyer click product image to view detail
+Summary: buyer can view product detail by clicking the product image
+Precondition: user has an account on this website and logged in
+Steps: 
+1. randomly choose one of the product as testing product
+2. click on the picture of product
+3. if jumps to product detail page then test pass
+
+
+
+Test case ID: 017
+Related functional requirements: FR004 - B2
+Title: guest buyer click product image to view detail
+Summary: guest buyer can view product detail by clicking the product image
+Precondition: guest user doesn't login 
+Steps: 
+1. randomly choose one of the product as testing product
+2. click on the picture of product
+3. if jumps to product detail page then test pass
+
+
+
+Test case ID: 018
+Related functional requirements: FR007 - B1
+Title: buyer add products to cart from product detail page
+Summary: The products can be added by the logged in buyers into shopping cart from the product detail page.
+Precondition: user has an account on this website and logged in and product detail page is accessible
+Steps: 
+1.randomly choose one of the product as testing product
+2.click on product page to jump to product detail page
+3.click "add to cart" button on the right side
+4. wait until the pop up window shows up
+5. close the pop up window
+6. if number of product + 1 on the top right cart block then test part one passed. click on cart block on the top right it will jump to check out page
+7. if chosen product shows up on check out page summary then whole test passed
+
+
+
+Test case ID: 019
+Related functional requirements: FR007 - B4
+Title: buyer add items in shopping cart
+Summary: User will be able to add items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+No steps avaliable! this website doesn't support adding items in shopping cart
+
+Test case ID: 020
+Related functional requirements: FR007 - B4
+Title: buyer remove items in shopping cart
+Summary: User will be able to remove items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. under the "Qty" section, click on "-" button
+3. the amount of this product - 1, test passed. 
+
+Test case ID: 021
+Related functional requirements: FR007 - B4
+Title: buyer update quantity of items in shopping cart
+Summary: User will be able to update quantity of items in shopping cart.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. under the "Qty" section, click on "+" button
+3. the amount of this product + 1, test passed. 
+
+Test case ID: 022
+Related functional requirements: FR008 - B3
+Title: Buyer enter billing address and shopping address before checkout
+Summary: Buyer will required to enter billing and shipping address before checkout and payment.
+Precondition: user has an account on this website and logged in and has more than one items in shopping cart
+Steps: 
+1. click on shopping cart "Cart" on the top right that will jump to summary page
+2. click on "Proceed to checkout" on the right bottom.
+3. if user has already input their billing address and/or shopping address then by default those addresses will be used. if not then website will ask user to input their addresses
+
+Test case ID: 023
+Related functional requirements: NFR001
+Title: The website repository shall accommodate up to 100 users concurrently.
+Summary: use selenium to write test to ask http request for 100 users concurrently 
+Steps: use selenium to write test to ask http request for 100 users concurrently. use synchronization to simulate 100 user access to home page.
+
+Test case ID: 024
+Related functional requirements: NFR002
+Title: page loading speed test
+Summary: web pages should not take more than 30 seconds to load in good speed of internet.
+Steps: use selienium/java to write a test. this test will simulate 10000 users that try to access to home page. each user will record the time that 
+access to home page. after that will average out the time. if the average time is <= to 30 seconds, then test pass
+
+
+Find and log 2 bugs.
+
+Bug ID: 001
+Title: Searching filter can not update
+Summary: when user click on any kind of sorting filter/catalog filter, website keeps loading and never updated
+
+Bug ID: 002
+Title: Item comparison Bug
+Summary: for a product that has added to compare list, when user refreshes page, this product still be able to be added again to compare list.
+And also the number of compare items shows on compare list will + 1. But when click into compare items page the list item doesn't have duplicate
+and the number of compare items drops back down.
