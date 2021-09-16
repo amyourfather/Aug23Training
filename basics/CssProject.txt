@@ -1,0 +1,11 @@
+1. [id = "useName"]
+2. .btn.btn-primary
+3. footer span
+4. ul#nav li:first-child
+5. select#oldSelectMenu option[value = 4]
+6. document.getElementById("sliderValue")
+ 			or
+   $ ("input#sliderValue")
+7. document.getElementById("userName")
+			or
+	$("input#userName")
