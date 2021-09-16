@@ -1,0 +1,32 @@
+http://www.ampeg.com
+
+Exercise 1
+As a user 
+I want to navigate to the homepage from the product details page
+So that I can easily get back to the homepage.
+
+1. Go to the Ampeg homepage (www.ampeg.com). Home page is displayed.
+2. In the main menu click the 'Products' link. 'Ampeg Product Directory' page is displayed.
+3. Click on 'SVT PRO SERIES Bass Heads' product to view the product details. 'Ampeg Pro Series' page is displayed.
+4. Click on 'SVT-3PRO' link. 'Ampeg: Pro Series - SVT-3PRO' details page is displayed.
+5. Click on 'Home' Breadcrumb link. Home page is displayed.
+6. Assert that the url is the correct url for the homepage.
+
+Exercise 2
+As a user 
+I want to get the handling weight of the SVT-410HLF
+So that I know how heavy it is.
+
+1. Go to the Ampeg homepage (www.ampeg.com). Home page is displayed.
+2. In the main menu click the 'Products' link. 'Ampeg Product Directory' page is displayed.
+3. Click on 'CLASSIC SERIES Bass Heads and Enclosures' product to view the product details. 'Ampeg: Classic Series' page is displayed.
+4. Click on 'SVT-410HLF' link. 'Ampeg: Classic Series - SVT-410HLF' details page is displayed.
+5. Assert that the last item in 'Specifications' is "Handling Weight: 85 Pounds".
+
+Requirements:
+1. Create a Page Object for each page that you interact with.
+2. Create superclasses where applicable.
+3. Runs on Chrome browser only.
+4. Arrange|Act|Assert in each test.
+5. Tests and Page Objects should use Fluent syntax.
+6. KISS - Keep it simple
