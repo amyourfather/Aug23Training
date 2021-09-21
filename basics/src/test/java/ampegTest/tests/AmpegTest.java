@@ -1,4 +1,4 @@
-package tests;
+package ampegTest.tests;
 
 import static org.junit.Assert.*;
 
@@ -15,11 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.ChromeDriverDocPage;
-import pageObjects.ChromeDriverHomePage;
-import pageObjects.ChromeDriverProductDetail;
-import pageObjects.ChromeDriverProductPage;
-import pageObjects.ChromeDriverProductSeries;
+import ampegTest.foundation.ChromeDriverDocPage;
+import ampegTest.pageObjects.ChromeDriverHomePage;
+import ampegTest.pageObjects.ChromeDriverProductDetail;
+import ampegTest.pageObjects.ChromeDriverProductPage;
+import ampegTest.pageObjects.ChromeDriverProductSeries;
 
 public class AmpegTest {
 	private String ChromeDriverPath;

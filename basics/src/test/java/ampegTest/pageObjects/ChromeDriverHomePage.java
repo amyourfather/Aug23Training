@@ -1,7 +1,8 @@
-package pageObjects;
+package ampegTest.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
+import ampegTest.foundation.ChromeDriverDocPage;
 import basics.Page;
 
 public class ChromeDriverHomePage extends ChromeDriverDocPage implements Page{

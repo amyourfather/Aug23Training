@@ -1,6 +1,8 @@
-package pageObjects;
+package ampegTest.pageObjects;
 
 import org.openqa.selenium.WebDriver;
+
+import ampegTest.foundation.ChromeDriverDocPage;
 
 public class ChromeDriverProductSeries extends ChromeDriverDocPage {
 
