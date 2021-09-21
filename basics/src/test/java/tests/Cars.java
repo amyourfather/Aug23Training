@@ -1,8 +1,13 @@
-package basics;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import basics.Car;
+import basics.ConvertibleCar;
+import basics.IEngine;
+import basics.LargeEngine;
 
 public class Cars {
 	@Test
