@@ -15,6 +15,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.ChromeDriverDocPage;
+import pageObjects.ChromeDriverHomePage;
+import pageObjects.ChromeDriverProductDetail;
+import pageObjects.ChromeDriverProductPage;
+import pageObjects.ChromeDriverProductSeries;
+
 public class AmpegTest {
 	private String ChromeDriverPath;
 	private final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver"; 

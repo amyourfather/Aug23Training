@@ -1,6 +1,8 @@
-package basics;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+
+import basics.Page;
 
 public class ChromeDriverHomePage extends ChromeDriverDocPage implements Page{
 
