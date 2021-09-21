@@ -2,53 +2,22 @@ package ampegTest.tests;
 
 import static org.junit.Assert.*;
 
-import java.time.Duration;
-import java.util.NoSuchElementException;
-
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import ampegTest.foundation.ChromeDriverDocPage;
 import ampegTest.pageObjects.ChromeDriverHomePage;
 import ampegTest.pageObjects.ChromeDriverProductDetail;
 import ampegTest.pageObjects.ChromeDriverProductPage;
 import ampegTest.pageObjects.ChromeDriverProductSeries;
+import framework.Testbase;
 
-public class AmpegTest {
-	private String ChromeDriverPath;
-	private final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver"; 
-	private final long WaitTimeOut = 5;
-	private Duration NavWaitTimeOut = Duration.ofSeconds(5);
-	private Duration PollingMilSec = Duration.ofMillis(100);
-	private WebDriver driver;
-	private ChromeDriverDocPage ChromeDriverDocPage;
-	
-	
-	@Before
-	public void PreinitChorme() {	
-		
-		ChromeDriverPath = "C:\\Users\\techo\\Desktop\\Selenium\\chromedriver.exe";
-		
-		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, ChromeDriverPath);
-		driver = new ChromeDriver();
-		ChromeDriverDocPage = new ChromeDriverDocPage(driver);
-	}
-	
+public class AmpegTest extends Testbase{
+
 	@Test
 	public void CanDisplayHomePageTest() {
 		ChromeDriverHomePage HomePage = ChromeDriverDocPage.DisplayHomePage();
 		String currentURL = driver.getCurrentUrl();
 		String HomeUrl = HomePage.getHomeUrl();
 		assertEquals("cant not go to url: " + HomeUrl, currentURL, HomeUrl);
-		
-		driver.quit();
 	}
 	
 	@Test
@@ -61,8 +30,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + ProductPageUrl, currentUrl, ProductPageUrl);
-		
-		driver.quit();
 	}
 	
 	@Test
@@ -78,7 +45,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + ProductSeriesUrl, currentUrl, ProductSeriesUrl);
-		driver.quit();
 	}
 	
 	@Test 
@@ -97,8 +63,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + SVT_3PRO_URL, currentUrl, SVT_3PRO_URL);
-		
-		driver.quit();
 	}
 	
 	@Test
@@ -118,7 +82,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + Homepage.getHomeUrl(), currentUrl, Homepage.getHomeUrl());
-		driver.quit();
 	}
 	
 	@Test
@@ -134,7 +97,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + ProductSeriesUrl, currentUrl, ProductSeriesUrl);
-		driver.quit();
 	}
 	
 	@Test 
@@ -153,8 +115,6 @@ public class AmpegTest {
 		String currentUrl = driver.getCurrentUrl();
 		
 		assertEquals("cant not go to url: " + SVT_410HLF_URL, currentUrl, SVT_410HLF_URL);
-		
-		driver.quit();
 	}
 	
 	@Test
@@ -175,7 +135,6 @@ public class AmpegTest {
 		String ExpectedResult = "Handling Weight: 85 Pounds";
 		//System.out.println(result[result.length - 1]);
 		assertEquals("last item in 'Specifications' is not \"" + ExpectedResult + "\"", result[result.length - 1], ExpectedResult );
-		driver.quit();
 	}
 	
 }

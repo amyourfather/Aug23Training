@@ -1,5 +1,5 @@
-package ampegTest.framework;
+package framework;
 
 public class WebDriverFactory {
-
+		
 }
