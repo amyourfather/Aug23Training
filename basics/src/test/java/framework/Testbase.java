@@ -9,27 +9,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import ampegTest.foundation.ChromeDriverDocPage;
 
-public class Testbase {
-	
+public abstract class Testbase {
+	private DriverManager DManager;
 	protected WebDriver driver;
 	private String ChromeDriverPath;
 	private final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver"; 
 	protected ChromeDriverDocPage ChromeDriverDocPage;
-	private final long WaitTimeOut = 5;
-	private Duration NavWaitTimeOut = Duration.ofSeconds(5);
-	private Duration PollingMilSec = Duration.ofMillis(100);
 	@Before
 	public void PreinitChorme() {	
 		
+		//will fix later
 		ChromeDriverPath = "C:\\Users\\techo\\Desktop\\Selenium\\chromedriver.exe";
 		
 		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, ChromeDriverPath);
-		driver = new ChromeDriver();
+		DManager = WebDriverFactory.getManager("Chrome");
+		DManager.createDriver();
+		driver = DManager.getDriver();
 		ChromeDriverDocPage = new ChromeDriverDocPage(driver);
 	}
 	
 	@After
 	public void cleanup(){
-		this.driver.quit();
+		DManager.quitDriver();
 	}
 }

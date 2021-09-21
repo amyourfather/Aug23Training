@@ -1,9 +1,7 @@
 package framework;
 
-
-
 public class WebDriverFactory {
-	public DriverManager getManager(String driverType) {
-		return null;
+	public static DriverManager getManager(String driverType) {
+		return new DriverManager(driverType);
 	}
 }
