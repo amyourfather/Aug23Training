@@ -11,10 +11,6 @@ public abstract class DriverManager {
 	protected String driverType;
 	protected String WEB_DRIVER_SYSTEM_PROPERTY; 
 	
-	public DriverManager(String driverType) {
-		this.driverType = driverType;
-	}
-	
 	public void createDriver() throws IOException, URISyntaxException {
 		return;
 	}

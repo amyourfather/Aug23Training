@@ -1,39 +1,17 @@
 package framework;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
-import java.util.Properties;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class EdgeDriverManager extends DriverManager {
 
-	public EdgeDriverManager(String driverType) {
-		super(driverType);
-	}
-
-	public void createDriver() throws IOException, URISyntaxException {
-		Properties pro = new Properties();
-		String propFileName = "config.properties";
+	public void createDriver() throws URISyntaxException {
 		
-		if (this.driverType == null) {
-			return;
-		}
-		
-		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
-		
-		if (inputStream != null) {
-			pro.load(inputStream);
-		} else {
-			throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-		}
-		
-		WEB_DRIVER_SYSTEM_PROPERTY = pro.getProperty(driverType);
-		String DriverName = pro.getProperty(WEB_DRIVER_SYSTEM_PROPERTY);
+		WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.edge.driver";
+		String DriverName = "msedgedriver.exe";
 		
 		URL res = getClass().getClassLoader().getResource(DriverName);
 		File file = Paths.get(res.toURI()).toFile();
@@ -42,6 +20,6 @@ public class EdgeDriverManager extends DriverManager {
 		
 		//will change later
 		
-		this.driver = new EdgeDriver();
+		DriverManager.driver = new EdgeDriver();
 	}
 }

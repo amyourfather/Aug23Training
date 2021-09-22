@@ -7,9 +7,7 @@ import org.junit.Test;
 import ampegTest.pageObjects.DriverHomePage;
 import ampegTest.pageObjects.DriverProductDetail;
 import ampegTest.pageObjects.DriverProductSeries;
-import ampegTest.pageObjects.DriverProductDetail;
 import ampegTest.pageObjects.DriverProductPage;
-import ampegTest.pageObjects.DriverProductSeries;
 import framework.Testbase;
 
 public class AmpegTest extends Testbase{
