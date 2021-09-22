@@ -1,21 +1,20 @@
 package ampegTest.pageObjects;
 
 import org.openqa.selenium.WebDriver;
-
-import ampegTest.foundation.ChromeDriverDocPage;
+import ampegTest.foundation.DriverDocPage;
 import basics.Page;
 
-public class ChromeDriverHomePage extends ChromeDriverDocPage implements Page{
+public class DriverHomePage extends DriverDocPage implements Page{
 
-	public ChromeDriverHomePage(WebDriver driver) {
+	public DriverHomePage(WebDriver driver) {
 		super(driver);
 	}
 	
-	public ChromeDriverProductPage DisplayProductPage() {
+	public DriverProductPage DisplayProductPage() {
 		String ProductPageUrl = "https://ampeg.com/products/";
 		String TopBarProductNavXpath = "//div[@id = 'global-topnav']//a[@title = 'Products']";
 		ClickTo(TopBarProductNavXpath, ProductPageUrl);
-		return new ChromeDriverProductPage(driver);
+		return new DriverProductPage(driver);
 	}
 
 }

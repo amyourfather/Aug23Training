@@ -11,28 +11,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import ampegTest.pageObjects.ChromeDriverHomePage;
+import ampegTest.pageObjects.DriverHomePage;
 import basics.Page;
 
-public class ChromeDriverDocPage implements Page{
+public class DriverDocPage implements Page{
 	protected WebDriver driver;
 	protected final long WaitTimeOut = 5;
 	protected Duration NavWaitTimeOut = Duration.ofSeconds(5);
 	protected Duration PollingMilSec = Duration.ofMillis(100);
 	protected String HomeUrl = "https://ampeg.com/index.html";
 	
-	public ChromeDriverDocPage(WebDriver driver) {
+	public DriverDocPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	//this is a helper function to help us to go to home page
-	public ChromeDriverHomePage DisplayHomePage() {
+	public DriverHomePage DisplayHomePage() {
 		driver.navigate().to(HomeUrl);
-		String currentURL = driver.getCurrentUrl();
-		return new ChromeDriverHomePage(driver);
+		return new DriverHomePage(driver);
 	}
 	
-	//this is a generic helper function to help us to click on the URL by using xpath
 	public void ClickTo(String xpath, String URL) {
 		WebElement button = driver.findElement(By.xpath(xpath));
 		

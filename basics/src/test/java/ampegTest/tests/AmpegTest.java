@@ -4,17 +4,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ampegTest.pageObjects.ChromeDriverHomePage;
-import ampegTest.pageObjects.ChromeDriverProductDetail;
-import ampegTest.pageObjects.ChromeDriverProductPage;
-import ampegTest.pageObjects.ChromeDriverProductSeries;
+import ampegTest.pageObjects.DriverHomePage;
+import ampegTest.pageObjects.DriverProductDetail;
+import ampegTest.pageObjects.DriverProductSeries;
+import ampegTest.pageObjects.DriverProductDetail;
+import ampegTest.pageObjects.DriverProductPage;
+import ampegTest.pageObjects.DriverProductSeries;
 import framework.Testbase;
 
 public class AmpegTest extends Testbase{
 
 	@Test
 	public void CanDisplayHomePageTest() {
-		ChromeDriverHomePage HomePage = ChromeDriverDocPage.DisplayHomePage();
+		DriverHomePage HomePage = DriverDocPage.DisplayHomePage();
 		String currentURL = driver.getCurrentUrl();
 		String HomeUrl = HomePage.getHomeUrl();
 		assertEquals("cant not go to url: " + HomeUrl, currentURL, HomeUrl);
@@ -24,7 +26,7 @@ public class AmpegTest extends Testbase{
 	public void CanDisplayProductPageTest() {
 		String ProductPageUrl = "https://ampeg.com/products/";
 		
-		ChromeDriverProductPage ProductPage = ChromeDriverDocPage
+		DriverProductPage ProductPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage();
 		String currentUrl = driver.getCurrentUrl();
@@ -38,7 +40,7 @@ public class AmpegTest extends Testbase{
 		String alt = "SVT Pro Series: Bass heads";
 		String ProductSeriesUrl = "https://ampeg.com/products/pro/";
 		
-		ChromeDriverProductSeries ProductSeriesPage = ChromeDriverDocPage
+		DriverProductSeries ProductSeriesPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series);
@@ -54,7 +56,7 @@ public class AmpegTest extends Testbase{
 		String SVT_3PRO_URL = "https://ampeg.com/products/pro/svt3pro/";
 		String alt = "SVT Pro Series: Bass heads";
 		
-		ChromeDriverProductDetail ProductDetailPage = ChromeDriverDocPage
+		DriverProductDetail ProductDetailPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series)
@@ -72,7 +74,7 @@ public class AmpegTest extends Testbase{
 		String SVT_3PRO_URL = "https://ampeg.com/products/pro/svt3pro/";
 		String alt = "SVT Pro Series: Bass heads";
 		
-		ChromeDriverHomePage Homepage = ChromeDriverDocPage
+		DriverHomePage Homepage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series)
@@ -90,7 +92,7 @@ public class AmpegTest extends Testbase{
 		String alt = "Classic Series: Bass heads & enclosures";
 		String ProductSeriesUrl = "https://ampeg.com/products/classic/";
 		
-		ChromeDriverProductSeries ProductSeriesPage = ChromeDriverDocPage
+		DriverProductSeries ProductSeriesPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series);
@@ -106,7 +108,7 @@ public class AmpegTest extends Testbase{
 		String SVT_410HLF_URL = "https://ampeg.com/products/classic/svt410hlf/";
 		String alt = "Classic Series: Bass heads & enclosures";
 		
-		ChromeDriverProductDetail ProductDetailPage = ChromeDriverDocPage
+		DriverProductDetail ProductDetailPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series)
@@ -124,7 +126,7 @@ public class AmpegTest extends Testbase{
 		String SVT_410HLF_URL = "https://ampeg.com/products/classic/svt410hlf/";
 		String alt = "Classic Series: Bass heads & enclosures";
 		
-		ChromeDriverProductDetail ProductDetailPage = ChromeDriverDocPage
+		DriverProductDetail ProductDetailPage = DriverDocPage
 				.DisplayHomePage()
 				.DisplayProductPage()
 				.DisplayProductSeries(alt, Series)
