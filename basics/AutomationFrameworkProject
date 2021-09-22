@@ -1,0 +1,19 @@
+A. Organize the project
+1. All items specific to the website under test should be in same folder
+2. TestClasses should be in /tests folder
+3. Page Objects should be in /pageObjects folder
+4. SuperClasses should be in /foundation folder
+5. Ensure that all package references are updated
+5. Create a /framework folder that contains the WebDriver Factory classes and other general Super Classes
+
+B. Make your automation project portable
+1. Create a 'resources' folder under root of the project
+2. Create a config.properties text file in the resources folder
+3. All webDrivers will be located in this folder instead of local drives
+4. Read the browser type from config.properties
+
+C. Make your automation project cross-browser compatible
+1. Your project should be compatible with Chrome and Edge browsers
+2. You should be able to switch browsers by changing the BrowserType parameter in config.properties
+3. TestBase should be the only class which calls WebDriverManager.createDriver(); 
+4. Implement the WebDriver factory pattern from the Design Patterns slide deck. Ensure that the WebDriverManagers for each browser launch the Web Drivers from /resources
