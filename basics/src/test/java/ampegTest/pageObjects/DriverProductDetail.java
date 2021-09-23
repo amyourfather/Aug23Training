@@ -15,5 +15,4 @@ public class DriverProductDetail extends DriverDocPage {
 		ClickTo(BreadcrumbHomeXpath, HomeUrl);
 		return new DriverHomePage(driver);
 	}
-
 }

@@ -16,10 +16,8 @@ public class EdgeDriverManager extends DriverManager {
 		URL res = getClass().getClassLoader().getResource(DriverName);
 		File file = Paths.get(res.toURI()).toFile();
 		String absolutePath = file.getAbsolutePath();
+		
 		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, absolutePath);
-		
-		//will change later
-		
 		DriverManager.driver = new EdgeDriver();
 	}
 }

@@ -16,9 +16,8 @@ public class ChromeDriverManager extends DriverManager {
 		URL res = getClass().getClassLoader().getResource(DriverName);
 		File file = Paths.get(res.toURI()).toFile();
 		String absolutePath = file.getAbsolutePath();
-		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, absolutePath);
 		
+		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, absolutePath);
 		DriverManager.driver = new ChromeDriver();
 	}
-
 }

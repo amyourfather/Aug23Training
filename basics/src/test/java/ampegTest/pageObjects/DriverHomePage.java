@@ -2,9 +2,8 @@ package ampegTest.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import ampegTest.foundation.DriverDocPage;
-import basics.Page;
 
-public class DriverHomePage extends DriverDocPage implements Page{
+public class DriverHomePage extends DriverDocPage{
 
 	public DriverHomePage(WebDriver driver) {
 		super(driver);
@@ -16,5 +15,4 @@ public class DriverHomePage extends DriverDocPage implements Page{
 		ClickTo(TopBarProductNavXpath, ProductPageUrl);
 		return new DriverProductPage(driver);
 	}
-
 }

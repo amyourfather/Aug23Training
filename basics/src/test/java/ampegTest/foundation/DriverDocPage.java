@@ -12,9 +12,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ampegTest.pageObjects.DriverHomePage;
-import basics.Page;
 
-public class DriverDocPage implements Page{
+public class DriverDocPage{
 	protected WebDriver driver;
 	protected final long WaitTimeOut = 5;
 	protected Duration NavWaitTimeOut = Duration.ofSeconds(5);

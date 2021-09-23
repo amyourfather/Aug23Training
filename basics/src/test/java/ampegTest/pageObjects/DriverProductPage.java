@@ -3,9 +3,8 @@ package ampegTest.pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import ampegTest.foundation.DriverDocPage;
-import basics.Page;
 
-public class DriverProductPage extends DriverDocPage implements Page{
+public class DriverProductPage extends DriverDocPage{
 
 	public DriverProductPage(WebDriver driver) {
 		super(driver);
@@ -18,5 +17,4 @@ public class DriverProductPage extends DriverDocPage implements Page{
 		
 		return new DriverProductSeries(driver);
 	}
-
 }
