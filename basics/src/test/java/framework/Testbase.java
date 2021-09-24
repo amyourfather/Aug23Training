@@ -18,7 +18,7 @@ public abstract class Testbase {
 		try {
 			browsertype = readproperties.ReadBrowserType();
 		} catch(Exception ex) {
-			
+			throw new RuntimeException("property file not found in the classpath");
 		}
 		
 
