@@ -6,8 +6,8 @@ import ampegTest.foundation.DriverDocPage;
 
 public class DriverProductPage extends DriverDocPage{
 
-	public DriverProductPage(WebDriver driver) {
-		super(driver);
+	public DriverProductPage(WebDriver driver, String HomeUrl) {
+		super(driver, HomeUrl);
 	}
 	
 	public DriverProductSeries DisplayProductSeries(String alt, String EndingUrl) {
@@ -15,6 +15,6 @@ public class DriverProductPage extends DriverDocPage{
 		String ProductXpath = "//img[@alt = '" + alt + "']/..";
 		ClickTo(ProductXpath, ProductUrl);
 		
-		return new DriverProductSeries(driver);
+		return new DriverProductSeries(driver, HomeUrl);
 	}
 }

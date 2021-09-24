@@ -1,23 +1,15 @@
 package framework;
 
-import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Paths;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class EdgeDriverManager extends DriverManager {
+	private final String DriverName = "msedgedriver.exe";
+	private final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.edge.driver";
 
-	public void createDriver() throws URISyntaxException {
-		
-		WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.edge.driver";
-		String DriverName = "msedgedriver.exe";
-		
-		URL res = getClass().getClassLoader().getResource(DriverName);
-		File file = Paths.get(res.toURI()).toFile();
-		String absolutePath = file.getAbsolutePath();
-		
-		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, absolutePath);
-		DriverManager.driver = new EdgeDriver();
+	public void createDriver() {
+		String filePathName = ClassLoader.getSystemResource(DriverName).getFile();
+		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, filePathName);
+
+		this.setDriver(new EdgeDriver());
 	}
 }

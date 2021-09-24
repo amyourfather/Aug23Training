@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ampegTest.foundation.AmpegTestbase;
 import ampegTest.pageObjects.DriverHomePage;
 import ampegTest.pageObjects.DriverProductDetail;
 import ampegTest.pageObjects.DriverProductSeries;
 import ampegTest.pageObjects.DriverProductPage;
-import framework.Testbase;
 
-public class AmpegTest extends Testbase{
+public class AmpegTest extends AmpegTestbase{
 
 	@Test
 	public void CanDisplayHomePageTest() {
