@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ampegTest.foundation.AmpegTestbase;
 import ampegTest.pageObjects.DriverHomePage;
 import ampegTest.pageObjects.DriverProductDetail;
 import ampegTest.pageObjects.DriverProductSeries;
 import ampegTest.pageObjects.DriverProductPage;
+import framework.Testbase;
 
-public class AmpegTest extends AmpegTestbase{
+public class AmpegTest extends Testbase{
 
 	@Test
 	public void CanDisplayHomePageTest() {
@@ -28,6 +28,7 @@ public class AmpegTest extends AmpegTestbase{
 				.DisplayHomePage()
 				.DisplayProductPage();
 		String currentUrl = driver.getCurrentUrl();
+		
 		assertEquals("cant not go to url: " + ProductPageUrl, currentUrl, ProductPageUrl);
 	}
 	
@@ -122,8 +123,6 @@ public class AmpegTest extends AmpegTestbase{
 		String SVT_410HLF_Path = "//img[@src[contains(.,'410HLF')]]/..";
 		String SVT_410HLF_URL = "https://ampeg.com/products/classic/svt410hlf/";
 		String alt = "Classic Series: Bass heads & enclosures";
-		String TextXPath = "//div[@class = 'specsCopy']";
-		String ExpectedResult = "Handling Weight: 85 Pounds";
 		
 		DriverProductDetail ProductDetailPage = DriverDocPage
 				.DisplayHomePage()
@@ -131,7 +130,10 @@ public class AmpegTest extends AmpegTestbase{
 				.DisplayProductSeries(alt, Series)
 				.DisplayProductDetail(SVT_410HLF_Path, SVT_410HLF_URL);
 		
+		String TextXPath = "//div[@class = 'specsCopy']";
 		String[] result = ProductDetailPage.GetText(TextXPath).split("\n");
+		String ExpectedResult = "Handling Weight: 85 Pounds";
+		//System.out.println(result[result.length - 1]);
 		assertEquals("last item in 'Specifications' is not \"" + ExpectedResult + "\"", result[result.length - 1], ExpectedResult );
 	}
 	
