@@ -1,21 +1,25 @@
 package framework;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+
+
 import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
-	private WebDriver driver;
+	protected static WebDriver driver = null;
+	protected String driverType;
+	protected String WEB_DRIVER_SYSTEM_PROPERTY; 
 	
-	public abstract void createDriver();
+	public void createDriver() throws IOException, URISyntaxException {
+		return;
+	}
 
 	public WebDriver getDriver() {
 		return driver;
 	}
 	
 	public void quitDriver() {
-		this.driver.quit();
-	}
-
-	protected void setDriver(WebDriver driver) {
-		this.driver = driver;
+		DriverManager.driver.quit();
 	}
 }
