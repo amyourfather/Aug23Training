@@ -3,12 +3,11 @@ package ampegTest.pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import ampegTest.foundation.DriverDocPage;
-import basics.Page;
 
-public class DriverProductPage extends DriverDocPage implements Page{
+public class DriverProductPage extends DriverDocPage{
 
-	public DriverProductPage(WebDriver driver) {
-		super(driver);
+	public DriverProductPage(WebDriver driver, String HomeUrl) {
+		super(driver, HomeUrl);
 	}
 	
 	public DriverProductSeries DisplayProductSeries(String alt, String EndingUrl) {
@@ -16,7 +15,6 @@ public class DriverProductPage extends DriverDocPage implements Page{
 		String ProductXpath = "//img[@alt = '" + alt + "']/..";
 		ClickTo(ProductXpath, ProductUrl);
 		
-		return new DriverProductSeries(driver);
+		return new DriverProductSeries(driver, HomeUrl);
 	}
-
 }
