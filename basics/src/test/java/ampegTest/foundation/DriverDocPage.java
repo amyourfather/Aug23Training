@@ -12,22 +12,22 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ampegTest.pageObjects.DriverHomePage;
-import basics.Page;
 
-public class DriverDocPage implements Page{
+public class DriverDocPage{
 	protected WebDriver driver;
 	protected final long WaitTimeOut = 5;
 	protected Duration NavWaitTimeOut = Duration.ofSeconds(5);
 	protected Duration PollingMilSec = Duration.ofMillis(100);
-	protected String HomeUrl = "https://ampeg.com/index.html";
+	protected String HomeUrl;
 	
-	public DriverDocPage(WebDriver driver) {
+	public DriverDocPage(WebDriver driver, String HomeUrl) {
 		this.driver = driver;
+		this.HomeUrl = HomeUrl;
 	}
 	
 	public DriverHomePage DisplayHomePage() {
 		driver.navigate().to(HomeUrl);
-		return new DriverHomePage(driver);
+		return new DriverHomePage(driver, HomeUrl);
 	}
 	
 	public void ClickTo(String xpath, String URL) {

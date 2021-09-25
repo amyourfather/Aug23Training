@@ -6,14 +6,13 @@ import ampegTest.foundation.DriverDocPage;
 
 public class DriverProductDetail extends DriverDocPage {
 
-	public DriverProductDetail(WebDriver driver) {
-		super(driver);
+	public DriverProductDetail(WebDriver driver, String HomeUrl) {
+		super(driver, HomeUrl);
 	}
 	
 	public DriverHomePage BackToHome() {
 		String BreadcrumbHomeXpath = "//div[@id = 'navLinks']//a[text() = 'Home']";
 		ClickTo(BreadcrumbHomeXpath, HomeUrl);
-		return new DriverHomePage(driver);
+		return new DriverHomePage(driver, HomeUrl);
 	}
-
 }
