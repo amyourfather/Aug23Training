@@ -16,4 +16,15 @@ public class ReadProperties {
 		
 		return properties.getProperty("BrowserType");
 	}
+	
+	public String ReadCSVName() throws IOException {
+		Properties properties = new Properties();
+		String propFileName = "config.properties";
+		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+		
+		properties.load(inputStream);
+		inputStream.close();
+		
+		return properties.getProperty("CsvName");
+	}
 }
