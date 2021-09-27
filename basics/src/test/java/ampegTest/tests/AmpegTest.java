@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ampegTest.foundation.DriverDocPage;
 import ampegTest.pageObjects.DriverHomePage;
 import ampegTest.pageObjects.DriverProductDetail;
 import ampegTest.pageObjects.DriverProductSeries;
@@ -11,9 +12,10 @@ import ampegTest.pageObjects.DriverProductPage;
 import framework.Testbase;
 
 public class AmpegTest extends Testbase{
-
+	private DriverDocPage DriverDocPage;
 	@Test
 	public void CanDisplayHomePageTest() {
+		DriverDocPage = new DriverDocPage(driver);
 		DriverHomePage HomePage = DriverDocPage.DisplayHomePage();
 		String currentURL = driver.getCurrentUrl();
 		String HomeUrl = HomePage.getHomeUrl();
@@ -22,6 +24,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test
 	public void CanDisplayProductPageTest() {
+		DriverDocPage = new DriverDocPage(driver);
 		String ProductPageUrl = "https://ampeg.com/products/";
 		
 		DriverProductPage ProductPage = DriverDocPage
@@ -34,6 +37,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test
 	public void CanClickToViewProductSeriesTest1() {
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "pro";
 		String alt = "SVT Pro Series: Bass heads";
 		String ProductSeriesUrl = "https://ampeg.com/products/pro/";
@@ -49,6 +53,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test 
 	public void CanClickSVT_3PRO(){
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "pro";
 		String SVT_3PRO_Path = "//img[@alt = 'SVT-3PRO']/..";
 		String SVT_3PRO_URL = "https://ampeg.com/products/pro/svt3pro/";
@@ -67,6 +72,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test
 	public void CanClickBreadcrumb_Home() {
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "pro";
 		String SVT_3PRO_Path = "//img[@alt = 'SVT-3PRO']/..";
 		String SVT_3PRO_URL = "https://ampeg.com/products/pro/svt3pro/";
@@ -86,6 +92,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test
 	public void CanClickToViewProductSeriesTest2() {
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "classic";
 		String alt = "Classic Series: Bass heads & enclosures";
 		String ProductSeriesUrl = "https://ampeg.com/products/classic/";
@@ -101,6 +108,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test 
 	public void CanClickSVT_410HLF(){
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "classic";
 		String SVT_410HLF_Path = "//img[@src[contains(.,'410HLF')]]/..";
 		String SVT_410HLF_URL = "https://ampeg.com/products/classic/svt410hlf/";
@@ -119,6 +127,7 @@ public class AmpegTest extends Testbase{
 	
 	@Test
 	public void HandlingWeightTest() {
+		DriverDocPage = new DriverDocPage(driver);
 		String Series = "classic";
 		String SVT_410HLF_Path = "//img[@src[contains(.,'410HLF')]]/..";
 		String SVT_410HLF_URL = "https://ampeg.com/products/classic/svt410hlf/";

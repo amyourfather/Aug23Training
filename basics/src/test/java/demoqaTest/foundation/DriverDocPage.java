@@ -10,10 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import ampegTest.pageObjects.DriverHomePage;
 import basics.Page;
+import demoqaTest.pageObjects.DriverLinkPage;
+import demoqaTest.pageObjects.DriverRadioButtonPage;
+import demoqaTest.pageObjects.DriverTextBoxPage;
 
-public abstract class DriverDocPage implements Page {
+public class DriverDocPage implements Page {
 	protected WebDriver driver;
 	protected final long WaitTimeOut = 5;
 	protected Duration NavWaitTimeOut = Duration.ofSeconds(5);
@@ -28,20 +30,28 @@ public abstract class DriverDocPage implements Page {
 	
 	public DriverDocPage NavigateToPage(String URL) {
 		if (URL == this.TextBoxUrl) {
-			
+			driver.navigate().to(URL);
+			return new DriverTextBoxPage(driver);
 		}
 		
 		if (URL == this.RadioButtonUrl) {
-			
+			driver.navigate().to(URL);
+			return new DriverRadioButtonPage(driver);
 		}
 		
 		if (URL == this.LinksUrl) {
-			
+			driver.navigate().to(URL);
+			return new DriverLinkPage(driver);
 		}
-		return null;
+		throw new IllegalArgumentException("you just entered an unsupported website URL: " + URL);
+	}
+	
+	public void Click(String xpath) {
+		WebElement button = driver.findElement(By.xpath(xpath));
 		
-		//driver.navigate().to(HomeUrl);
-		//return new DriverDocPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver, WaitTimeOut);
+		wait.until(ExpectedConditions.elementToBeClickable(button));			
+		button.click();
 	}
 	
 	public void ClickTo(String xpath, String URL) {
@@ -62,8 +72,4 @@ public abstract class DriverDocPage implements Page {
 		WebElement Location = driver.findElement(By.xpath(xpath));
 		return Location.getText();
 	}
-	
-	//public String getHomeUrl() {
-	//	return HomeUrl;
-	//}
 }

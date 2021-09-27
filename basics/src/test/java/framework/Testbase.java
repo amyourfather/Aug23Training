@@ -10,12 +10,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
-import ampegTest.foundation.DriverDocPage;
-
 public abstract class Testbase {
 	private DriverManager DManager;
 	protected WebDriver driver;
-	protected DriverDocPage DriverDocPage;
+	
 	@Before
 	public void Preinit() throws IOException, URISyntaxException {
 		
@@ -35,7 +33,6 @@ public abstract class Testbase {
 		DManager = WebDriverFactory.getManager(DriverName);
 		DManager.createDriver();
 		driver = DManager.getDriver();
-		DriverDocPage = new DriverDocPage(driver);
 	}
 	
 	@After
