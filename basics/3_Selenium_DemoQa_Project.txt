@@ -1,0 +1,31 @@
+1. Write a test for each scenario below.
+2. Keep tests for each page in their own Test Class
+3. Write a Page Object for each page
+4. Write a TestBase/SuperClass for all of the tests
+5. Write a PageObjectBase/SuperClass for the Pages (see my repo for an example)
+
+
+https://demoqa.com/text-box
+Complete all fields on the form and click Submit. A series of labels will appear. Ensure that the label text matches the text you entered.
+
+
+https://demoqa.com/radio-button
+Click each Radio button. Ensure that the text "You have selected ___ " matches the button you clicked.
+
+
+https://demoqa.com/links
+a. Click the 'Home' hyperlink. A new browser tab will open. Click the 'Join Now' button on the newly opened page.
+b. Click the 'Created' hyperlink. Ensure that the label text matches the expected text.
+
+Hint: Use WebDriver.switchTo()
+
+
+https://demoqa.com/dynamic-properties
+Navigate to the page. Ensure that the 'Visible After 5 Seconds' button appears.
+
+Hint: Use WebDriverWait().until
+https://stackoverflow.com/questions/15656252/wait-till-text-present-in-text-field
+
+//Write the manual test here
+public void canDoSomething() {
+}
