@@ -29,3 +29,34 @@ https://stackoverflow.com/questions/15656252/wait-till-text-present-in-text-fiel
 //Write the manual test here
 public void canDoSomething() {
 }
+
+
+1. 
+https://demoqa.com/text-box
+Create the Textbox control extension. Include synchronization. 
+Should contain the following methods:
+void setValue(String value)
+String getValue()
+
+Textbox fullNameTextbox = new Textbox(element);
+fullNameTextbox.setValue("Joe");
+
+String fullName = fullNameTextbox.getValue();
+
+2.
+https://demoqa.com/radio-button
+Create the RadioButton control extension. Include synchronization. 
+Should contain the following methods:
+void select(String label);
+String getSelected();
+
+RadioGroup radioGroup = new RadioGroup(element);
+radioGroup.select("Yes");
+
+String radioGroup.getSelected();
+
+3.
+https://demoqa.com/links
+Create the Hyperlink control extension. Include synchronization.
+Should contain the following methods:
+void click();

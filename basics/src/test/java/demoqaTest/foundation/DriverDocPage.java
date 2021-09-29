@@ -1,7 +1,10 @@
 package demoqaTest.foundation;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -68,8 +71,50 @@ public class DriverDocPage implements Page {
 		urlchangewait.until(ExpectedConditions.urlToBe(URL));
 	}
 	
+	public String ClickNewTab(String xpath, String URL) {
+		WebElement button = driver.findElement(By.xpath(xpath));
+		
+		WebDriverWait wait = new WebDriverWait(driver, WaitTimeOut);
+		wait.until(ExpectedConditions.elementToBeClickable(button));			
+		button.click();
+		
+		Set<String> windowHandles = driver.getWindowHandles();
+		Iterator<String> iterator = windowHandles.iterator();
+		String newTabWindowHandle = "";
+		while(iterator.hasNext()) {
+			newTabWindowHandle = iterator.next();
+		}
+		driver.switchTo().window(newTabWindowHandle);
+		
+		FluentWait<WebDriver> urlchangewait = new FluentWait<WebDriver>(driver)
+				.withTimeout(this.NavWaitTimeOut)
+				.pollingEvery(this.PollingMilSec)
+				.ignoring(NoSuchElementException.class);
+		urlchangewait.until(ExpectedConditions.urlToBe(URL));
+		return newTabWindowHandle;
+	}
+	
 	public String GetText(String xpath) {
 		WebElement Location = driver.findElement(By.xpath(xpath));
 		return Location.getText();
+	}
+	
+	public String[] GetTexts(String xpath) {
+		List<WebElement> locations = driver.findElements(By.xpath(xpath));
+		int size = locations.size();
+		System.out.println(size);
+		String[] result = new String[size];
+		for(int i = 0; i < size; i++) {
+			result[i] = locations.get(i).getText();
+		}
+		return result;
+	}
+	
+	public DriverDocPage SwitchBackTo(String Url, String WindowHandle) {
+		if (Url == this.LinksUrl) {
+			driver.switchTo().window(WindowHandle);
+			return new DriverLinkPage(driver);
+		}
+		throw new IllegalArgumentException("you just entered an unsupported website URL: " + Url);
 	}
 }

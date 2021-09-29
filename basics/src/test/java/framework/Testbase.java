@@ -37,6 +37,6 @@ public abstract class Testbase {
 	
 	@After
 	public void cleanup(){
-		DManager.quitDriver();
+		//DManager.quitDriver();
 	}
 }
