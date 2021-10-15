@@ -1,0 +1,9 @@
+Use java.sql to write the coded version of the SQL Basic project completed in week 2.
+
+Remember, you must connect to your local Sakila DB instance. 
+Example: DriverManager.getConnection(url, userId, password)
+
+1. Ensure that you use java.sql PreparedStatement to execute the Stored Procedure queries.
+2. Ensure that you use the java.sql Statement Interface to execute queries.
+
+https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm
